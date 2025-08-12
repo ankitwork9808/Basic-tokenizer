@@ -8,7 +8,7 @@ It includes both:
 - A **web-based interface** for interactive exploration  
 - A **CLI tool** for quick testing of encode/decode with pretrained vocab  
 
-The **pre-trained vocabulary** is stored in `public/vocab.js`.  
+The **pre-trained vocabulary** is stored in `public/vocab.json`.  
 
 While this is a **basic implementation**, real-world LLMs (Large Language Models) often use **Byte Pair Encoding (BPE)** or other advanced methods for better efficiency. *(BPE support may be added in the future.)*
 
@@ -26,7 +26,7 @@ While this is a **basic implementation**, real-world LLMs (Large Language Models
 
 ## 🚀 Getting Started  
 
-```bash
+
 # 1️⃣ Clone the repository
 git clone <repo-url>
 cd <repo-folder>
@@ -72,7 +72,6 @@ npm run dev
 
 The CLI tool don't allows you to train the tokenizer with **custom data** user web for that, Cli only supports run **encode/decode** operations.  
 
-```bash
 # Encode text into tokens/IDs
 node tokenizer-cli encode="your text"
 
