@@ -13,6 +13,8 @@ The **pre-trained vocabulary** is stored in `public/vocab.json`.
 While this is a **basic implementation**, real-world LLMs (Large Language Models) often use **Byte Pair Encoding (BPE)** or other advanced methods for better efficiency. *(BPE support may be added in the future.)*
 
 ---
+### View Demo
+[Vide Demo](https://tokenizer-ruddy.vercel.app/)
 
 ### 🎥 Video  
 [![Watch in Action](https://img.youtube.com/vi/WwTRYqaj8G0/0.jpg)](https://youtu.be/WwTRYqaj8G0)  
