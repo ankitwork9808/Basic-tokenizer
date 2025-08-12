@@ -7,6 +7,7 @@ export default function MethodSelector({ method, onChange }) {
       <div className="inline-flex overflow-hidden rounded-md border border-neutral-800">
         {items.map((m, i) => (
           <button
+            disabled={i != 'char'}
             key={m}
             onClick={() => onChange(m)}
             className={[
