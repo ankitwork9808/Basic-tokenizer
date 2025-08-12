@@ -3,7 +3,7 @@ export default function CorpusPanel({corpus, setCorpus, onTrain, onToggleView, c
   return (
     <section className="rounded-xl border border-neutral-800 bg-neutral-900/40 p-4">
       <div className="mb-2 flex items-center justify-between">
-        <h2 className="text-base font-medium">1) Train from Corpus</h2>
+        <h2 className="text-base font-medium">1) Train from Custom Corpus (Text)</h2>
         <span className="h-5 text-xs text-emerald-400">{status}</span>
       </div>
       <textarea

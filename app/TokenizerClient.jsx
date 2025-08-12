@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MethodSelector from "./components/MethodSelector";
 import CorpusPanel from "./components/CorpusPanel";
 import VocabTable from "./components/VocabTable";
@@ -15,10 +15,27 @@ export default function TokenizerClient() {
   const [vocab, setVocab] = useState(null);
   const [showVocab, setShowVocab] = useState(false);
   const [status, setStatus] = useState("");
+  const [defaultLoaded, setDefaultLoaded] = useState(false);
+
+  const loadDefaultVocab = () => {
+    fetch("/vocab.json")
+      .then((res) => {
+        if (!res.ok) throw new Error("No vocab.json found");
+        return res.json();
+      })
+      .then((data) => {
+        console.log("Loaded vocab.json", data);
+        setVocab(data);
+        setDefaultLoaded(true);
+      })
+      .catch(() => {
+        alert("No pre-saved vocab.json found in /public");
+      });
+  };
 
   function handleTrain() {
     if (!corpus.trim()) { 
-        setStatus("Provide a corpus before training.");
+        setStatus("Provide a text before training.");
         return; 
     }
 
@@ -38,6 +55,19 @@ export default function TokenizerClient() {
   return (
     <div className="space-y-6">
       <MethodSelector method={method} onChange={setMethod} />
+      <div className="mb-4 flex justify-end gap-3">
+        <button
+          className="rounded-md bg-emerald-600 px-3 py-1.5 text-sm font-medium text-neutral-950 hover:bg-emerald-500 cursor-pointer"
+          onClick={loadDefaultVocab}
+        >
+          Load Default Vocab
+        </button>
+        {defaultLoaded && (
+          <span className="text-sm text-green-400">
+            Default vocab.json loaded
+          </span>
+        )}
+      </div>
       <CorpusPanel
         corpus={corpus}
         setCorpus={setCorpus}
