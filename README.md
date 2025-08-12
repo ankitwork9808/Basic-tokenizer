@@ -14,6 +14,10 @@ While this is a **basic implementation**, real-world LLMs (Large Language Models
 
 ---
 
+### 🎥 Video  
+[![Watch in Action](https://img.youtube.com/vi/WwTRYqaj8G0/0.jpg)](https://youtu.be/WwTRYqaj8G0)  
+Click the image above to watch the full **video demonstration** on YouTube.
+
 ## 🛠 Tech Stack  
 - **Next.js** — React-based web framework
 - **Tailwind CSS** — UI styling
