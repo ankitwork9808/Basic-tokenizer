@@ -6,7 +6,7 @@ This project is a **simple character-level tokenizer** designed to demonstrate h
 
 It includes both:  
 - A **web-based interface** for interactive exploration  
-- A **CLI tool** for training and testing with custom data  
+- A **CLI tool** for quick testing of encode/decode with pretrained vocab  
 
 The **pre-trained vocabulary** is stored in `public/vocab.js`.  
 
