@@ -72,12 +72,12 @@ npm run dev
 
 The CLI tool don't allows you to train the tokenizer with **custom data** user web for that, Cli only supports run **encode/decode** operations.  
 
-# Encode text into tokens/IDs
+### Encode text into tokens/IDs
 node tokenizer-cli encode="your text"
 
 ![cli_encode](screenshots/cli_encode.png)
 
-# Decode IDs back to text
+### Decode IDs back to text
 node tokenizer-cli decode="0,1,2"
 
 ![cli_decode](screenshots/cli_decode.png)
