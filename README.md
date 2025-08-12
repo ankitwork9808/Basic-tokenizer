@@ -27,14 +27,14 @@ While this is a **basic implementation**, real-world LLMs (Large Language Models
 ## 🚀 Getting Started  
 
 
-# 1️⃣ Clone the repository
+### 1️⃣ Clone the repository
 git clone <repo-url>
 cd <repo-folder>
 
-# 2️⃣ Install dependencies (if required)
+### 2️⃣ Install dependencies 
 npm install
 
-# 3️⃣ Launch the web interface
+### 3️⃣ Launch the web interface
 npm run dev
 
 
